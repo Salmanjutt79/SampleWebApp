@@ -11,3 +11,20 @@
         <module name="EmptyBlock"/>
     </module>
 </module>
+s=" CREATE TABLE strecord (stid integer, name varchar(30), class varchar(15),roll_number integer)"
+cur.execute(s)
+
+
+import mysql.connector
+conn=mysql.connector.connect(host='localhost', password='Salman@123', user='root',database='students')
+cur=conn.cursor()
+s="INSERT INTO strecord (stid,name,class,roll_number) VALUES(%s,%s,%s,%s)"
+strecord=[
+    (1,'adnan','Seven',10),
+    (2,'muneeb','Seven',12),
+    (3,'Zubair','Seven',13),
+    (4,'Zain','Seven',14),
+    (5,'Basit','Ninth',15)]
+cur.executemany(s,strecord)
+conn.commit()
+
