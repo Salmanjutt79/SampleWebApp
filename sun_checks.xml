@@ -28,3 +28,4 @@ strecord=[
 cur.executemany(s,strecord)
 conn.commit()
 
+
