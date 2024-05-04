@@ -27,5 +27,5 @@ strecord=[
     (5,'Basit','Ninth',15)]
 cur.executemany(s,strecord)
 conn.commit()
-
+https://medium.com/@anshita.bhasin/docker-cheat-sheet-196f97525e10
 
